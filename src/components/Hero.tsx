@@ -11,8 +11,8 @@ export function Hero() {
           </p>
 
           <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Stop the Flaking.{' '}
-            <span className="text-purple-300">Get Paid Upfront.</span>
+            Turn bookings into{' '}
+            <span className="text-purple-300">paid commitments.</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-200 sm:text-xl">
