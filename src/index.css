@@ -10,3 +10,54 @@ body {
     "Apple Color Emoji", "Segoe UI Emoji";
 }
 
+@keyframes fadeInSoft {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInSoft 200ms ease-out;
+}
+
+@keyframes marqueeX {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.marquee-track {
+  width: max-content;
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+  will-change: transform;
+  animation: marqueeX 35s linear infinite;
+}
+
+@media (min-width: 768px) {
+  .marquee-track {
+    gap: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+    transform: none;
+  }
+}
+
